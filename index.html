@@ -19,31 +19,40 @@
                 <p>Select your choice</p>
             </div>
             <div class="choice">
-                <div class="rock">
+                <div class="chooseable__weapon" id="rock">
                     <i class="fa-solid fa-hand-back-fist"></i>
                 </div>
-                <div class="paper">
+                <div class="chooseable__weapon" id="paper">
                     <i class="fa-solid fa-hand"></i>
                 </div>
-                <div class="scissors">
+                <div class="chooseable__weapon" id="scissors">
                     <i class="fa-solid fa-hand-scissors"></i>
                 </div>
             </div>
             <div class="status">
                 <div class="status__contets">
                     <div class="status__text">
-                        <p>Wins: 0</p>
-                        <p>Loses: 0</p>
-                        <p>Tie: 0</p>
+                        <p id="statusSection">Wins: 0 &nbsp; Loses: 0 &nbsp; Tie: 0</p>
                     </div>
                     <div class="reset__button">
-                        <button>Reset Status</button>
-                        <p></p>
+                        <button id="resetbtn">Reset Status</button>
+                        <p id="resetText"></p>
                     </div>
                 </div>
             </div>
+            <div class="popup hide">
+                <div class="textbox">
+                    <h2 id="resulthead"></h2>
+                    <p id="resultbrief"></p>
+                    <button id="playagain">Play Again</button>
+                </div>
+            </div>
         </div>
+
+        
     </div>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

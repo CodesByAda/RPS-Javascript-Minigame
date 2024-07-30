@@ -21,6 +21,7 @@ body {
 }
 
 .box {
+    position: relative;
     background-color: #0A131C;
     width: 50%;
     height: 50%;
@@ -78,8 +79,7 @@ body {
 }
 
 .status__text {
-    display: flex;
-    gap: 1rem;
+    text-align: center;
 }
 
 .reset__button {
@@ -103,4 +103,50 @@ body {
     cursor: pointer;
     box-shadow: 0 1px 1px 0;
     transition: .5s ease-in-out all;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: black;
+    height: 100%;
+    width: 50vw;
+    border-top: solid 40px #114450;
+}
+
+.textbox {
+    width: 90%;
+    margin: 10% auto;
+    text-align: center;
+}
+
+.textbox h2 {
+    font-size: 64px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.textbox p {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.textbox button {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #114450;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.textbox button:hover {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
 }
