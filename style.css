@@ -8,7 +8,7 @@
 body {
     width: 100%;
     color: white;
-    
+    overflow-x: hidden;
 }
 
 .container {
@@ -24,13 +24,14 @@ body {
     position: relative;
     background-color: #0A131C;
     width: 50%;
-    height: 50%;
+    min-width: 320px;
     box-shadow: 0 5px 5px 0 black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
+    padding: 10px 10px 30px 10px;
 }
 
 .text {
@@ -42,6 +43,7 @@ body {
     font-size: 55px;
     text-transform: uppercase;
     font-weight: 900;
+    padding: 10px;
 }
 
 .text p {
@@ -51,6 +53,9 @@ body {
 .choice {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .choice > div {
@@ -112,17 +117,30 @@ body {
     background-color: white;
     color: black;
     height: 100%;
-    width: 50vw;
+    width: 100%;
     border-top: solid 40px #114450;
     animation: widthincrease 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popupcontents {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .textbox {
     width: 100%;
-    height: 64px;
+    min-height: 64px;
     text-align: center;
-    margin-top: 20px;
+    padding: 25px 5px 0 5px;
 }
+
 
 .textbox h2 {
     font-size: 64px;
@@ -134,6 +152,7 @@ body {
     margin: auto;
     height: 40px;
     width: 150px;
+    margin: 25px 0;
 }
 
 .buttonbox button {
@@ -151,7 +170,7 @@ body {
 }
 
 .result {
-    margin: 20px 0;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
 }
@@ -182,9 +201,19 @@ body {
     display: none;
 }
 
-.opacity {
-    opacity: 0;
-} 
+@media (max-width: 690px) {
+    .text h2 {
+        font-size: 45px;
+    }
+
+    .text p{
+        font-size: 20px;
+    }
+
+    .textbox h2 {
+        font-size: 35px;
+    }
+}
 
 
 @keyframes slideUp {
@@ -224,14 +253,5 @@ body {
     }
     to {
         width: 50vw;
-    }
-}
-
-@keyframes fontincrease {
-    from {
-        font-size: 0;
-    }
-    to {
-        font-size: 14px;
     }
 }
