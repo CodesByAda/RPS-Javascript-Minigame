@@ -114,12 +114,14 @@ body {
     height: 100%;
     width: 50vw;
     border-top: solid 40px #114450;
+    animation: widthincrease 1s;
 }
 
 .textbox {
-    width: 90%;
-    margin: 10% auto;
+    width: 100%;
+    height: 64px;
     text-align: center;
+    margin-top: 20px;
 }
 
 .textbox h2 {
@@ -128,14 +130,15 @@ body {
     font-weight: 900;
 }
 
-.textbox p {
-    font-size: 18px;
-    padding: 10px;
-}
-
-.textbox button {
+.buttonbox {
+    margin: auto;
     height: 40px;
     width: 150px;
+}
+
+.buttonbox button {
+    height: 100%;
+    width: 100%;
     border: none;
     background-color: #114450;
     color: white;
@@ -143,10 +146,92 @@ body {
     font-weight: 900;
 }
 
-.textbox button:hover {
+.buttonbox button:hover {
     cursor: pointer;
+}
+
+.result {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.result > div {
+    background-color: #114450;
+    color: white;
+    animation: grow 2s;
+    transition: .5s all ease-in-out;
+}
+
+.result > div:hover {
+    background-color: white;
+    border: solid 10px #114450;
+}
+
+.result__weapon {
+    display: flex;
+    flex-direction: column;
+}
+
+.result__weapon p {
+    font-size: 14px;
+    animation: slideUp 5s;
 }
 
 .hide {
     display: none;
+}
+
+.opacity {
+    opacity: 0;
+} 
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes widthincrease {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50vw;
+    }
+}
+
+@keyframes fontincrease {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 14px;
+    }
 }
